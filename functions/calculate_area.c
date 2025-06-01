@@ -17,14 +17,9 @@ int main()
 
 }
 
-float calculate_are(float radius)
+float calculate_area(float radius)
 {
     float area;
     area = PI * radius * radius;
     return area;
-}
-
-float calculate_area(float radius)
-{
-    return 0.0f;
 }
