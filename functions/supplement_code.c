@@ -12,17 +12,21 @@ void main()
         printf("ENd with a negative number.\n");
         printf("Select animal:");
         scanf("%d", &choice);
+
         if(choice < 0){
             printf("Terminating the program...");
 
         }
         else if (choice == 1){
+            
             cat();
         }
         else if (choice == 2){
+            
             dog();
         }
         else if (choice == 3){
+            
             cow();
         }
         else {
@@ -30,4 +34,18 @@ void main()
         } 
     }while (choice > 0);
 }
-// need three functions (?), may write it on june 6
+// update on june 6
+void cat(choice)
+{
+    printf("The cat says meow!");
+}
+
+void dog(void)
+{
+    printf("The dog says wuff-wuff!");
+}
+
+void cow(void)
+{
+    printf("The cow says moo!");
+}
