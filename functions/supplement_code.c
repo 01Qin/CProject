@@ -4,7 +4,7 @@ void cat(void);
 void dog(void);
 void cow(void);
 
-void main()
+int main()
 {
     int choice;
     do{
@@ -35,7 +35,7 @@ void main()
     }while (choice > 0);
 }
 // update on june 6
-void cat(choice)
+void cat(void)
 {
     printf("The cat says meow!");
 }
