@@ -15,7 +15,8 @@ int main()
     21, 23, 54, 67, 67, 
     43, 2, 45, 99, 0, 
     54, 76, 88, 63, 5};
-
+    
+    // need the third array for holding the sum of the matrices
     int sum_matrix[5][5];
     int y, x;
 
@@ -27,6 +28,8 @@ int main()
                 if (x == 4) {
                     printf("%d\n", sum_matrix[y][x]);
                 }
+                // every time the value of x is 4, the program must print a newline. 
+                // In other cases, a tab character (\t) is printed between the elements.
                 else {
                     printf("%d\t", sum_matrix[y][x]);
                 }
