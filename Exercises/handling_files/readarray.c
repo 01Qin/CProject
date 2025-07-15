@@ -17,10 +17,13 @@ int main()
         for(y = 0; y < 5; y ++){
             for(x = 0; x < 4; x++){
                 if(x == 3){
+                    // the last number on each line is followed by a newline that
+                    // the function will automatically recognise as a separator.
                     fscanf(read_file, "%d", &matrix[y][x]);
                 }
                 else {
-                    fscanf(read_file, "%d", &matrix[y][x]);
+                    // the numbers in the file are seperated by commas
+                    fscanf(read_file, "%d,", &matrix[y][x]);
                 }
             }
         }
@@ -43,7 +46,7 @@ int main()
                     fprintf(write_file, "%d\n", squares[y][x]);
                 }
                 else {
-                    fprintf(write_file, "%d", squares[y][x]);
+                    fprintf(write_file, "%d,", squares[y][x]);
                 }
             }
         }
