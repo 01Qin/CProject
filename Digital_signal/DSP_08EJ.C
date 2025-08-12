@@ -41,12 +41,10 @@ void main()
 	    if ((CI[K]) < 0.0) I_VZ_IM = 1; /* VZ-Flag auf 1 wenn CI neg.*/
 	    if ((CR[K]) < 0.0) I_VZ_RE = 1; /* VZ-Flag auf 1 wenn CR neg.*/
 
-
 	    if (fabs (CI[K]) < 0.001) CI[K] = 0.0;
 	    if ((CR[K] < 0.00001)&&((CR[K] >= 0.0))) CR[K] = 0.00001;
 	    if ((CR[K] > -0.00001)&&((CR[K]<= 0.0))) CR[K] = -0.00001;
 
-		// betrag: magnitude
 	    BETRAG[K] = sqrt(CR[K]*CR[K] + CI[K]*CI[K]);
 	    PHASE[K] = atan(CI[K]/CR[K]);
 	    if ((I_VZ_RE == 1)&&((I_VZ_IM == 1))) PHASE[K] = PHASE[K] - PI;

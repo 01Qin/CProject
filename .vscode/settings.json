@@ -16,6 +16,7 @@
         "DFRPRBS.C": "cpp",
         "MEHRD.C": "cpp",
         "MA_5ER.C": "cpp",
-        "DFR4TN.C": "cpp"
+        "DFR4TN.C": "cpp",
+        "Fourier-Transform.C": "cpp"
     }
 }
