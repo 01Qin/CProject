@@ -13,7 +13,7 @@ int main() {
     scanf("%f", &taxi_price);
 
     printf("How much money do you have: ");
-    scanf("%f", &taxi_price);
+    scanf("%f", &money);
 
     printf("Do you want to take\n 1. bus (3.50 euros)\n 2. taxi (25.70 euros)\n");
 
@@ -24,12 +24,13 @@ int main() {
     switch (selection) {
         case 1: {
             printf("You chose: %d\n", selection);
-            printf("You have %f euros left.", money - bus_price);
+            printf("You have %.2f euros left.", money - bus_price);
             break;
         }
         case 2: {
             printf("You chose: %d", selection);
-            printf("You have %f euros left", money - taxi_price);
+            printf("You have %.2f euros left", money - taxi_price);
+            break;
         }
             default:
             printf("You need to walk, bye!");
