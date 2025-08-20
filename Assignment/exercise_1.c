@@ -23,12 +23,12 @@ int main() {
 
     switch (selection) {
         case 1: {
-            printf("Your chose: %d\n", selection);
+            printf("You chose: %d\n", selection);
             printf("You have %f euros left.", money - bus_price);
             break;
         }
         case 2: {
-            printf("Your chose: %d", selection);
+            printf("You chose: %d", selection);
             printf("You have %f euros left", money - taxi_price);
         }
             default:
