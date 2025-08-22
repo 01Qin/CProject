@@ -2,10 +2,12 @@
 // Created by Quinn on 19.8.2025.
 //
 #include <stdio.h>
-float bus_price=0, taxi_price=0, money=0;
-int selection;
+
 
 int main() {
+    float bus_price=0, taxi_price=0, money=0;
+    int selection;
+
     printf("Enter price of bus ticket: ");
     scanf("%f", &bus_price);
 
