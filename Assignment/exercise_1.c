@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 float bus_price=0, taxi_price=0, money=0;
-int selection=0;
+int selection;
 
 int main() {
     printf("Enter price of bus ticket: ");
