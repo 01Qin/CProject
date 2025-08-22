@@ -15,7 +15,13 @@ int main() {
     printf("How much money do you have: ");
     scanf("%f", &money);
 
-    printf("Do you want to take\n 1. bus (3.50 euros)\n 2. taxi (25.70 euros)\n");
+    if (money < bus_price && money < taxi_price) {
+        printf("You need to walk, bye!\n");
+        return 0;
+    }
+
+    while (money >= bus_price || money >= taxi_price) {
+    printf("\nDo you want to take:\n 1. Bus (%.2f euros)\n 2. Taxi (%.2f euros)\n", bus_price, taxi_price);
 
     printf("Enter your selection: ");
     scanf("%d", &selection);
@@ -23,17 +29,34 @@ int main() {
 
     switch (selection) {
         case 1: {
-            printf("You chose: %d\n", selection);
-            printf("You have %.2f euros left.", money - bus_price);
+            if (money >= bus_price) {
+                money -= bus_price;
+                printf("You chose: %d\n", selection);
+                printf("You have %.2f euros left.\n", money);
+            } else {
+                printf("You don’t have enough money for the bus.\n");
+            }
             break;
+
         }
         case 2: {
-            printf("You chose: %d", selection);
-            printf("You have %.2f euros left", money - taxi_price);
+            if (money >= taxi_price) {
+                money -= taxi_price;
+                printf("You chose: %d\n", selection);
+                printf("You have %.2f euros left.\n", money);
+            }
+            else {
+                printf("You don't have enough money for the taxi.\n");
+            }
             break;
         }
-            default:
-            printf("You need to walk, bye!");
+        default:
+            printf("Invalid selection, please chose 1 or 2.\n");
     }
-    return 0;
+        if (money < bus_price && money < taxi_price) {
+            printf("You need to walk, bye!");
+            break;
+        }
+    }
+return 0;
 }
