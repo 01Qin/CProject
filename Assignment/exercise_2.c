@@ -2,9 +2,10 @@
 // Created by Quinn on 22.8.2025.
 //
 #include <stdio.h>
+
 int main() {
     float tax_rate, income_limit, over_limit;
-    float month_salary[12],month_tax[12];
+    float month_salary[12], month_tax[12];
     int index;
     printf("Enter tax rate: ");
     scanf("%f", &tax_rate);
@@ -18,10 +19,9 @@ int main() {
         printf("Enter income for month %d: ", index + 1);
         scanf("%f", &month_salary[index]);
 
-        if (month_salary[index] <=income_limit) {
+        if (month_salary[index] <= income_limit) {
             month_tax[index] = tax_rate / 100 * month_salary[index];
-        }
-        else {
+        } else {
             month_tax[index] = tax_rate / 100 * income_limit + over_limit / 100 * (month_salary[index] - income_limit);
         }
     }
