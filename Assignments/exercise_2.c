@@ -11,7 +11,7 @@ int main() {
     scanf("%f", &tax_rate);
     printf("Enter income limit: ");
     scanf("%f", &income_limit);
-    printf("Enter tax rate for incom over the limit: ");
+    printf("Enter tax rate for income over the limit: ");
     scanf("%f", &over_limit);
     over_limit = tax_rate / income_limit;
 
