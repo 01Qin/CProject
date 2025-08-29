@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 int main() {
-    int student_total = 0, i = 0, student_num, grade;
+    int student_total = 0, i = 0, student_num, grade = -1;
 
     printf("How many students: ");
     scanf("%d", &student_total);
@@ -13,7 +13,6 @@ int main() {
         printf("There is no student without any number!\n");
         return 0;
     }
-
 
     int grades[student_total];
     for (i = 0; i < student_total; i++) {
