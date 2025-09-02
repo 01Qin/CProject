@@ -9,7 +9,8 @@ int main() {
     printf("How many students: ");
     scanf("%d", &student_total);
 
-    if (student_total <= 0) {
+    if (scanf("%d", &student_total) != 0 ) {
+        while (getchar() != '\n');
         printf("There is no student without any number!\n");
         return 0;
     }
